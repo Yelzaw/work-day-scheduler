@@ -13,7 +13,6 @@ function displayTime() {
 }
 displayTime();
 
-
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -22,9 +21,9 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   $(".saveBtn").on("click",function(){
-    var save = $(this).siblings(".description").value;
-    console.log(save);
-  })
+    var saveText = $(this).siblings(".description").val();
+    console.log(saveText);
+  });
   //
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
