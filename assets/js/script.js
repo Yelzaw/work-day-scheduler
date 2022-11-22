@@ -2,7 +2,7 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-var currentHrEl = dayjs().format("hA");
+var currentHrEl = dayjs().format("HH");
 console.log(currentHrEl);
 
 // handle displaying the time
@@ -28,9 +28,18 @@ $(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   function compareTime() {
-    $(".time-block").each(function(i, obj){
+    $(".time-block").each(function(){
         var timeNote = parseInt($(this).attr("id").split("hour-")[1]);
-        console.log(timeNote);
+
+        if (timeNote<=currentHrEl) {
+        console.log("Past");
+      }
+      else if (timeNote===currentHrEl) {
+        console.log("present");
+      }
+      else if (timeNote>=currentHrEl) {
+        console.log("future");
+      }
     });
     }
     compareTime()
