@@ -3,7 +3,7 @@
 var currentHrEl = dayjs().format("H");
 console.log(currentHrEl);
 
-$(function () {
+$(document).ready(function () { //Added $( document ).ready() , will load only when the document is "ready." 
   
   //using function of 'this', 'siblings' and 'parent' collect the note of schedule, save into localstorage.
   $(".saveBtn").on("click",function(){
