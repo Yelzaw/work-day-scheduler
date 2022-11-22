@@ -16,6 +16,6 @@ MIT License
 
 ## Completed Works - Link and Screenshot
 
-- https://yelzaw.github.io/coding-timed-quiz-with-javascript/
+- https://yelzaw.github.io/work-day-scheduler/
 
 <img src="/assets/images/web-broswer.png" width="300" alt="Screenshot of webpage">
