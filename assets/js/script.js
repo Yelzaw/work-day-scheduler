@@ -2,7 +2,8 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-var currentHrEl = dayjs().format("HH");
+//  var currentHrEl = dayjs().format("HH");
+var currentHrEl = 14;
 console.log(currentHrEl);
 
 // handle displaying the time
@@ -31,13 +32,22 @@ $(function () {
     $(".time-block").each(function(){
         var timeNote = parseInt($(this).attr("id").split("hour-")[1]);
 
-        if (timeNote<=currentHrEl) {
+        if (timeNote < currentHrEl) {
+          $(this).removeClass("present");
+          $(this).removeClass("future");
+          $(this).addClass("past");
         console.log("Past");
       }
-      else if (timeNote===currentHrEl) {
+      else if (timeNote==currentHrEl) {
+        $(this).removeClass("past");
+        $(this).removeClass("future");
+        $(this).addClass("present");
         console.log("present");
       }
-      else if (timeNote>=currentHrEl) {
+      else if (timeNote>currentHrEl) {
+        $(this).removeClass("past");
+        $(this).removeClass("present");
+        $(this).addClass("future");
         console.log("future");
       }
     });
