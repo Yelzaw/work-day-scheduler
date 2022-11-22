@@ -9,7 +9,7 @@ The challenge of this week is to create a simple calendar application that allow
 - Forum and in-class discussion 
 - Discussion of people on https://stackoverflow.com/
 - https://www.w3schools.com
-- the [Day.js](https://day.js.org/en/)
+- https://day.js.org/
 
 ## License
 MIT License
