@@ -15,7 +15,7 @@ $(document).ready(function () { //Added $( document ).ready() , will load only w
     $(this).siblings(".description").text("");
     var saveTime = $(this).parent().attr("id");
     localStorage.removeItem(saveTime);
-    window.location.reload();
+    location.reload();
   })
   //clear all schedules
   $(".clearBtn").on("click",function(){
