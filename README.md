@@ -18,4 +18,4 @@ MIT License
 
 - https://yelzaw.github.io/work-day-scheduler/
 
-<img src="/assets/images/web-broswer.png" width="300" alt="Screenshot of webpage">
+<img src="/assets/images/web-broswer.png" width="350" alt="Screenshot of webpage">
