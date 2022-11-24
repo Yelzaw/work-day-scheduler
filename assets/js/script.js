@@ -10,11 +10,16 @@ $(document).ready(function () { //Added $( document ).ready() , will load only w
     var saveTime = $(this).parent().attr("id");
     localStorage.setItem(saveTime,saveText);
   });
-  
+  //delete the note of schedule
   $(".delBtn").on("click",function(){
     $(this).siblings(".description").text("");
     var saveTime = $(this).parent().attr("id");
     localStorage.removeItem(saveTime);
+    window.location.reload();
+  })
+  //clear all schedules
+  $(".clearBtn").on("click",function(){
+    localStorage.clear();
     window.location.reload();
   })
   // extract id and make comparision with current hr, and adjust the class base on hour
