@@ -47,13 +47,24 @@ textarea {
 
 .saveBtn {
   border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
 }
 
 .saveBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.delBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #d55c06;
+  color: white;
+}
+
+.delBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }

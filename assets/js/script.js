@@ -1,7 +1,6 @@
 
 // current Hour
 var currentHrEl = dayjs().format("H");
-console.log(currentHrEl);
 
 $(document).ready(function () { //Added $( document ).ready() , will load only when the document is "ready." 
   
@@ -12,6 +11,12 @@ $(document).ready(function () { //Added $( document ).ready() , will load only w
     localStorage.setItem(saveTime,saveText);
   });
   
+  $(".delBtn").on("click",function(){
+    $(this).siblings(".description").text("");
+    var saveTime = $(this).parent().attr("id");
+    localStorage.removeItem(saveTime);
+    window.location.reload();
+  })
   // extract id and make comparision with current hr, and adjust the class base on hour
   function compareTime() {
     $(".time-block").each(function(){
@@ -22,21 +27,18 @@ $(document).ready(function () { //Added $( document ).ready() , will load only w
           $(this).removeClass("present");
           $(this).removeClass("future");
           $(this).addClass("past");
-        console.log("Past");
       }
       // change the class to "present" if id of time have same with current hr
       else if (timeNote==currentHrEl) {
         $(this).removeClass("past");
         $(this).removeClass("future");
         $(this).addClass("present");
-        console.log("present");
       }
       // change the class to "future" if id of time have not reach current hr
       else if (timeNote>currentHrEl) {
         $(this).removeClass("past");
         $(this).removeClass("present");
         $(this).addClass("future");
-        console.log("future");
       }
     });
     }
